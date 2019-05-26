@@ -1,0 +1,101 @@
+.wrapper {
+  border-bottom: 2px solid #ddd;
+  display: inline-block;
+  font-family: Roboto;
+  margin: 20px 40px;
+  padding-bottom: 15px;
+  width: 300px;
+}
+.wrapper .chart-container {
+  align-items: center;
+  display: flex;
+  justify-content: center; 
+  height: 200px;
+}
+.wrapper .chart-container .chart {
+  position: absolute; 
+}
+.wrapper .chart-container .chart-text {
+  position: relative;
+  top: -15px;
+  text-align: center; 
+}
+.wrapper .chart-container .chart-text span {
+  display: block; 
+}
+.wrapper .chart-container .chart-text span.measure {
+  color: #A2A2A2;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  top: -3px;
+}
+.wrapper .chart-container .chart-text span.value {
+  color: #3F3F3F;
+  font-size: 1.6rem; 
+}
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.footer span.label:first-of-type {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.footer span.percent {
+  color: #3F3F3F;
+  margin-right: .35rem; 
+}
+.footer span.value {
+  color: #A2A2A2; 
+}
+.footer div:last-of-type span:first-of-type {
+  text-align: right;
+}
+/* Color schemes */
+.color-green .light-pie {
+  fill: #87D536;
+  color: #87D536;
+}
+.color-green .dark-pie {
+  fill: #386A0F;
+  color: #386A0F;
+}
+.color-green .area {
+  fill: #F6FBF3;
+}
+.color-green .trendline {
+  stroke: #D9ECC0;
+}
+.color-blue .light-pie {
+  fill: #6ECADF;
+  color: #6ECADF;
+}
+.color-blue .dark-pie {
+  fill: #285568;
+  color: #285568;
+}
+.color-blue .area {
+  fill: #F1FAFA;
+}
+.color-blue .trendline {
+  stroke: #CAE9F4;
+}
+.color-orange .light-pie {
+  fill: #F0C700;
+  color: #F0C700;
+}
+.color-orange .dark-pie {
+  fill: #BE591C;
+  color: #BE591C;
+}
+.color-orange .area {
+  fill: #FCFAF3;
+}
+.color-orange .trendline {
+  stroke: #FBE9B9;
+}

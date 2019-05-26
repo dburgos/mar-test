@@ -1,0 +1,50 @@
+[
+  {
+    "device": "tablet",
+    "value": 16000
+  },
+  {
+    "device": "smartphone",
+    "value": 15000
+  },
+  {
+    "device": "tablet",
+    "value": 16000
+  },
+  {
+    "device": "smartphone",
+    "value": 16000
+  },
+  {
+    "device": "tablet",
+    "value": 17000
+  },
+  {
+    "device": "smartphone",
+    "value": 16000
+  },
+  {
+    "device": "tablet",
+    "value": 17000
+  },
+  {
+    "device": "tablet",
+    "value": 17000
+  },
+  {
+    "device": "tablet",
+    "value": 18000
+  },
+  {
+    "device": "smartphone",
+    "value": 18000
+  },
+  {
+    "device": "tablet",
+    "value": 19000
+  },
+  {
+    "device": "smartphone",
+    "value": 15000
+  }
+]
