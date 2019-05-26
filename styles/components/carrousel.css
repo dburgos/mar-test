@@ -1,0 +1,39 @@
+demo-carrousel {
+  width: 380px;
+  height: 300px;
+  border: 2px solid #aaa;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  scroll-behavior: smooth;
+}
+
+demo-carrousel > demo-widget {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.carrousel-selector {
+  padding: 0;
+  margin: 30px 0;
+}
+
+.bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ddd;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.bullet.active {
+  background: #888;
+}
+
+.bullet:hover {
+  cursor: pointer;
+}

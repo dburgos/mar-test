@@ -9,6 +9,15 @@ const demoConfig = {
   }
 };
 
+const carrouselConfig = {
+  entry: './src/pages/carrousel.js',
+  mode: 'development',
+  output: {
+    filename: 'carrousel.js',
+    path: path.resolve(__dirname, 'dist')
+  }
+};
+
 const testConfig = {
   entry: './spec/suite.js',
   mode: 'development',
@@ -18,4 +27,4 @@ const testConfig = {
   }
 };
 
-module.exports = [demoConfig, testConfig];
+module.exports = [demoConfig, carrouselConfig, testConfig];

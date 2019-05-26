@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./spec/suite.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/carrousel.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6322,54 +6322,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dis
 
 /***/ }),
 
-/***/ "./spec/src/components/carrousel.spec.js":
-/*!***********************************************!*\
-  !*** ./spec/src/components/carrousel.spec.js ***!
-  \***********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_components_carrousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/carrousel */ \"./src/components/carrousel.js\");\n\n\ndescribe('src/components/carrousel.js', () => {\n\n  describe('Carrousel()', () => {\n    const testCarrousel = new _src_components_carrousel__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n\n    it('should be defined', () => {\n      expect(_src_components_carrousel__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).toBeDefined();\n    });\n\n    it('instance should be defined', () => {\n      expect(testCarrousel).toBeDefined();\n      expect(testCarrousel).toBeTruthy();\n    });\n\n    it('connectedCallback() should be defined', () => {\n      expect(testCarrousel.connectedCallback).toBeDefined();\n    });\n\n    it('addBullets() should be defined', () => {\n      expect(testCarrousel.addBullets).toBeDefined();\n    });\n\n    it('moveTo() should be defined', () => {\n      expect(testCarrousel.moveTo).toBeDefined();\n    });\n  });\n});\n\n//# sourceURL=webpack:///./spec/src/components/carrousel.spec.js?");
-
-/***/ }),
-
-/***/ "./spec/src/components/widget.spec.js":
-/*!********************************************!*\
-  !*** ./spec/src/components/widget.spec.js ***!
-  \********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_components_widget_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/components/widget.js */ \"./src/components/widget.js\");\n\n\ndescribe('src/components/widget.js', () => {\n\n  describe('Widget()', () => {\n    const testWidget = new _src_components_widget_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    const data = __webpack_require__(/*! ../../../data/revenue.json */ \"./data/revenue.json\");\n\n    it('should be defined', () => {\n      expect(_src_components_widget_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).toBeDefined();\n    });\n\n    it('instance should be defined', () => {\n      expect(testWidget).toBeDefined();\n      expect(testWidget).toBeTruthy();\n    });\n\n    it('connectedCallback() should be defined', () => {\n      expect(testWidget.connectedCallback).toBeDefined();\n    });\n\n    it('render() should be defined', () => {\n      expect(testWidget.render).toBeDefined();\n    });\n\n    describe('precalculate()', () => {\n      it('should be defined', () => {\n        expect(testWidget.precalculate).toBeDefined();\n      });\n\n      it('should return 0 when no data', () => {\n        const out = testWidget.precalculate();\n        expect(out.list).toBeDefined();\n        expect(out.list.length).toBe(0);\n        expect(out.smartphonePercent).toBe(0);\n        expect(out.smartphoneTotal).toBe(0);\n        expect(out.tabletPercent).toBe(0);\n        expect(out.tabletTotal).toBe(0);\n        expect(out.total).toBe(0);\n      });\n\n      it('should precalculate succesfully', () => {\n        const out = testWidget.precalculate(data);\n        expect(out.list).toBeDefined();\n        expect(out.list.length).toBe(12);\n        expect(out.smartphonePercent).toBe(40);\n        expect(out.smartphoneTotal).toBe(80000);\n        expect(out.tabletPercent).toBe(60);\n        expect(out.tabletTotal).toBe(120000);\n        expect(out.total).toBe(200000);\n      });\n    });\n\n    describe('rendering...', () => {\n      let mounted;\n      let error;\n      beforeAll(() => {\n        try {\n          const testElement = document.createElement('demo-widget');\n          testElement.setAttribute('data-source', 'revenue');\n          mounted = document.body.appendChild(testElement);\n        } catch (err) {\n          error = err;\n        }\n      });\n\n      it('should do it without error', () => {\n        expect(error).not.toBeDefined();\n      });\n\n      it('should render it succesfully', () => {\n        expect(mounted).toBeDefined();\n      });\n\n      it('should use blue color if undefined', () => {\n        const element = document.getElementsByTagName('demo-widget')[0];\n        const color = element.colorScheme;\n        expect(color).toBe('blue');\n      });\n    });\n  });\n});\n\n//# sourceURL=webpack:///./spec/src/components/widget.spec.js?");
-
-/***/ }),
-
-/***/ "./spec/src/lib/util.spec.js":
-/*!***********************************!*\
-  !*** ./spec/src/lib/util.spec.js ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../src/lib/util.js */ \"./src/lib/util.js\");\n\n\ndescribe('src/lib/util.js', () => {\n\n  describe('formatThousands()', () => {\n\n    it('should be defined', () => {\n      expect(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]).toBeDefined();\n    });\n\n    it('should parse a number less than 1K', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(999)).toBe('999');\n    });\n\n    it('should parse a number more than 1K', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(9999)).toBe('9.999');\n    });\n\n    it('should parse a million as number', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(9999999)).toBe('9.999.999');\n    });\n\n    it('should parse a number with decimals', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(9999.95)).toBe('9.999,95');\n    });\n\n    it('should parse a string less than 1K', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('999')).toBe('999');\n    });\n\n    it('should parse a string more than 1K', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('9999')).toBe('9.999');\n    });\n\n    it('should parse a million as string', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('9999999')).toBe('9.999.999');\n    });\n\n    it('should parse a string with decimals', () => {\n      expect(Object(_src_lib_util_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('9999.95')).toBe('9.999,95');\n    });\n  });\n\n});\n\n//# sourceURL=webpack:///./spec/src/lib/util.spec.js?");
-
-/***/ }),
-
-/***/ "./spec/suite.js":
-/*!***********************!*\
-  !*** ./spec/suite.js ***!
-  \***********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_lib_util_spec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/lib/util.spec.js */ \"./spec/src/lib/util.spec.js\");\n/* harmony import */ var _src_components_widget_spec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./src/components/widget.spec.js */ \"./spec/src/components/widget.spec.js\");\n/* harmony import */ var _src_components_carrousel_spec_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./src/components/carrousel.spec.js */ \"./spec/src/components/carrousel.spec.js\");\n\n\n\n\n//# sourceURL=webpack:///./spec/suite.js?");
-
-/***/ }),
-
 /***/ "./src/components/carrousel.js":
 /*!*************************************!*\
   !*** ./src/components/carrousel.js ***!
@@ -6403,6 +6355,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return formatThousands; });\nfunction formatThousands(number) {\n  return number.toString().replace('.', ',').replace(/\\B(?=(\\d{3})+(?!\\d))/g, \".\");\n}\n\n//# sourceURL=webpack:///./src/lib/util.js?");
+
+/***/ }),
+
+/***/ "./src/pages/carrousel.js":
+/*!********************************!*\
+  !*** ./src/pages/carrousel.js ***!
+  \********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_carrousel_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/carrousel.js */ \"./src/components/carrousel.js\");\n/* harmony import */ var _components_widget_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/widget.js */ \"./src/components/widget.js\");\n\n\n\n//# sourceURL=webpack:///./src/pages/carrousel.js?");
 
 /***/ })
 
