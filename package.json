@@ -9,7 +9,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "d3": "^5.9.2",
+    "d3": "^7.6.1",
     "jasmine": "^3.4.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2"
